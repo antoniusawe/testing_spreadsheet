@@ -6,7 +6,6 @@
 
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
-
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -15,9 +14,21 @@ import matplotlib.pyplot as plt
 scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
 
 # Load credentials from JSON key file
-creds = ServiceAccountCredentials.from_json_keyfile_name(r"C:\Users\078220\Downloads\my-project-streamlit-436805-e610ec20ce30.json", scope) 
+creds_dict = {
+    "type": st.secrets["gspread"]["type"],
+    "project_id": st.secrets["gspread"]["project_id"],
+    "private_key_id": st.secrets["gspread"]["private_key_id"],
+    "private_key": st.secrets["gspread"]["private_key"],
+    "client_email": st.secrets["gspread"]["client_email"],
+    "client_id": st.secrets["gspread"]["client_id"],
+    "auth_uri": st.secrets["gspread"]["auth_uri"],
+    "token_uri": st.secrets["gspread"]["token_uri"],
+    "auth_provider_x509_cert_url": st.secrets["gspread"]["auth_provider_x509_cert_url"],
+    "client_x509_cert_url": st.secrets["gspread"]["client_x509_cert_url"]
+} 
 
 # Authorize and initialize gspread
+creds = ServiceAccountCredentials.from_json_keyfile_dict(creds_dict, scope)
 client = gspread.authorize(creds)
 
 # Open the Google Sheet by URL
