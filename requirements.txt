@@ -1,9 +1,6 @@
 gspread
-oauth2client.service_account
-ServiceAccountCredentials
-streamlit
-pandas
-matplotlib
-gspread
 google-auth
 google-auth-oauthlib
+streamlit
+matplotlib
+pandas
