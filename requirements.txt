@@ -4,6 +4,6 @@ google-auth-oauthlib==1.0.0
 streamlit==1.25.0
 matplotlib==3.8.0
 pandas==2.1.1
-Pillow==9.5.0  # atau gunakan versi yang lebih lama jika tetap bermasalah
+Pillow==8.4.0  # Gunakan versi Pillow yang stabil
 setuptools>=42
 wheel
