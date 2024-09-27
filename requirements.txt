@@ -1,0 +1,6 @@
+gspread
+oauth2client.service_account
+ServiceAccountCredentials
+streamlit
+pandas
+matplotlib
