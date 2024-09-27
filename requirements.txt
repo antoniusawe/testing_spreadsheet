@@ -1,6 +1,10 @@
+--upgrade pip
 gspread==6.1.2
 google-auth==2.23.4
 google-auth-oauthlib==1.0.0
 streamlit==1.25.0
 matplotlib==3.8.0
 pandas==2.1.1
+Pillow==9.5.0  # atau gunakan versi yang lebih lama jika tetap bermasalah
+setuptools>=42
+wheel
