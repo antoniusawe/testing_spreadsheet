@@ -28,7 +28,7 @@ creds_dict = {
 } 
 
 # Authorize and initialize gspread
-creds = ServiceAccountCredentials.from_json_keyfile_dict(creds_dict, scope)
+creds = Credentials.from_service_account_info(creds_dict, scopes=scope)
 client = gspread.authorize(creds)
 
 # Open the Google Sheet by URL
