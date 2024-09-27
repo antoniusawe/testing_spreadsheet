@@ -4,3 +4,6 @@ ServiceAccountCredentials
 streamlit
 pandas
 matplotlib
+gspread
+google-auth
+google-auth-oauthlib
